@@ -2,27 +2,118 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Poppins Regular";
+    src: url("./assets/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins Bold";
+    src: url("./assets/Poppins-Bold.ttf");
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url(./assets/background.jpg) no-repeat;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins Regular", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Header */
 header {
     display: flex;
+    background: transparent;
+    width: 90vw;
+    padding: 10px;
+    align-items: center;
 }
 
 #account-btn {
     margin-left: auto;
 }
 
+#account-logo {
+    width: 3.5rem;
+}
+
 #logo {
     margin-right: auto;
+    width: 3.5rem;
 }
 
 /* Side Nav */
 nav {
     position: fixed;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.nav-tile {
+    height: 17vh;
+    width: 15vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    background: rgb(240, 245, 250);
+}
+
+#create-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./assets/create-btn-bg.JPG") no-repeat;
+    background-size: cover;
+    font-size: 1.5rem;
+    font-weight: 700;
+    overflow: hidden;
+    color: rgb(240, 245, 250);
+}
+
+ul {
     display: flex;
     flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.link-item {
+    display: flex;
+}
+
+.arrow {
+    margin-left: auto;
 }
 
 /* Main Content */
+#page-container {
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 80vh;
+    background: rgb(220, 230, 245);
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
 #grid-container {
     display: grid;
     grid-template: repeat(3, 1fr) / (2, 1fr);
