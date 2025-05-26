@@ -153,12 +153,19 @@ ul {
 
 /* Main Content */
 
+main > h1 {
+    text-align: center;
+    color: rgb(110, 155, 194);
+    font-size: 3rem;
+}
+
 #grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 15px;
     row-gap: 50px;
     column-gap: 25px;
+    margin-top: -20px;
 }
 
 .project {
