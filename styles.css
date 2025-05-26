@@ -27,6 +27,18 @@ body {
     font-family: "Poppins Regular", sans-serif;
 }
 
+#page-container {
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 80vh;
+    background: rgb(220, 230, 245);
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -55,8 +67,7 @@ header {
 }
 
 /* Side Nav */
-nav {
-    position: fixed;
+#sidenav {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
@@ -115,6 +126,11 @@ ul {
 .link-item {
     display: flex;
     font-family: "Poppins Bold", sans-serif;
+    transition: color 0.2s ease;
+}
+
+.link-item:hover {
+    color: rgb(88, 133, 172);
 }
 
 .arrow {
@@ -123,19 +139,35 @@ ul {
 }
 
 /* Main Content */
-#page-container {
-    display: flex;
-    align-items: center;
-    width: 90vw;
-    height: 80vh;
-    background: rgb(220, 230, 245);
-    border: 1px solid white;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 10px;
-}
 
 #grid-container {
     display: grid;
-    grid-template: repeat(3, 1fr) / (2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15px;
+    row-gap: 50px;
+    column-gap: 25px;
+}
+
+.project {
+    width: 15vw;
+    height: 25vh;
+    border: 1px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgb(240, 245, 250);
+    padding: 15px;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 20%;
+    width: 100%;
+
+    background: rgb(110, 155, 194);
+    font-size: 1.25rem;
+    color: rgb(240, 245, 250);
+    border-radius: 5px;
 }
